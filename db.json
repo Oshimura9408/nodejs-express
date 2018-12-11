@@ -1,0 +1,112 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "img": "https://via.placeholder.com/150",
+      "genre": "romance",
+      "name": "Twilight",
+      "rating": "4",
+      "description": "test-description",
+      "isReaded": true
+    },
+    {
+      "id": "2",
+      "img": "https://via.placeholder.com/150",
+      "genre": "romance",
+      "name": "Fifty Shades Darker",
+      "rating": "4",
+      "description": "test-description",
+      "isReaded": true
+    },
+    {
+      "id": "3",
+      "img": "https://via.placeholder.com/150",
+      "genre": "romance",
+      "name": "The Selection",
+      "rating": "4",
+      "description": "test-description",
+      "isReaded": false
+    },
+    {
+      "id": "4",
+      "img": "https://via.placeholder.com/150",
+      "genre": "fantasy",
+      "name": "Harry Potter",
+      "rating": "4",
+      "description": "test-description",
+      "isReaded": true
+    },
+    {
+      "id": "5",
+      "img": "https://via.placeholder.com/150",
+      "genre": "classics",
+      "name": "The Great Gatsby",
+      "rating": "2",
+      "description": "test-description",
+      "isReaded": false
+    },
+    {
+      "id": "6",
+      "img": "https://via.placeholder.com/150",
+      "genre": "romance",
+      "name": "Me Before You",
+      "rating": "2",
+      "description": "test-description",
+      "isReaded": true
+    },
+    {
+      "id": "7",
+      "img": "https://via.placeholder.com/150",
+      "genre": "fantasy",
+      "name": "A Game of Thrones",
+      "rating": "1",
+      "description": "test-description",
+      "isReaded": false
+    },
+    {
+      "id": "8",
+      "img": "https://via.placeholder.com/150",
+      "genre": "classics",
+      "name": "Romeo and Juliet",
+      "rating": "2",
+      "description": "test-description",
+      "isReaded": false
+    },
+    {
+      "id": "9",
+      "img": "https://via.placeholder.com/150",
+      "genre": "fantasy",
+      "name": "The Lord of the Rings",
+      "rating": "0",
+      "description": "test-description",
+      "isReaded": false
+    },
+    {
+      "id": "10",
+      "img": "https://via.placeholder.com/150",
+      "genre": "classics",
+      "name": "Fahrenheit 451",
+      "rating": "2",
+      "description": "test-description",
+      "isReaded": true
+    },
+    {
+      "id": "11",
+      "img": "https://via.placeholder.com/150",
+      "genre": "classics",
+      "name": "Hamlet",
+      "rating": "3",
+      "description": "test-description",
+      "isReaded": true
+    },
+    {
+      "id": "12",
+      "img": "https://via.placeholder.com/150",
+      "genre": "fantasy",
+      "name": "The Golden Compass",
+      "rating": "5",
+      "description": "test-description",
+      "isReaded": false
+    }
+  ]
+}
