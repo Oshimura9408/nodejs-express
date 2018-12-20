@@ -9,6 +9,7 @@ const newBooks = data => Object.assign(
       .split('.')[1]),
     img: 'https://via.placeholder.com/150',
     isReaded: false,
+    progress: '0%',
   },
   data
 );
@@ -76,13 +77,13 @@ router.patch('/:id', (req, res) => {
   res.json({ status: 'OK', data: book });
 });
 
-// // DELETE /books/:id
-// router.delete('/:id', (req, res) => {
-//   db.get('cards')
-//     .remove({ id: req.params.id })
-//     .write();
+// DELETE /books/:id
+router.delete('/:id', (req, res) => {
+  db.get('books')
+    .remove({ id: req.params.id })
+    .write();
 
-//   res.json({ status: 'OK' });
-// });
+  res.json({ status: 'OK' });
+});
 
 module.exports = router;
