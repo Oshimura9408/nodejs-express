@@ -2,6 +2,17 @@ const router = require('express').Router();
 const db = require('../db/db');
 const { validate } = require('jsonschema');
 
+const newBooks = data => Object.assign(
+  {
+    id: String(Math.random()
+      .toString(16)
+      .split('.')[1]),
+    img: 'https://via.placeholder.com/150',
+    isReaded: false,
+  },
+  data
+);
+
 // GET /books
 router.get('/', (req, res) => {
   let books;
@@ -39,55 +50,21 @@ router.get('/:name', (req, res) => {
   res.json({ status: book ? 'OK' : 'BAD_REQUEST', data: book });
 });
 
-// // GET /books/genre
-// router.get('/:genre', (req, res) => {
-//   const book = db.get('books').filter({ genre: req.params.genre });
-//
-//   res.json({ status: 'OK', data: book });
-// });
-
 // POST /books
-// router.post('/', (req, res, next) => {
-//   // const requestBodySchema = {
-//   //   id: 'path-task',
-//   //   type: 'object',
-//   //   properties: { text: { type: 'string' } },
-//   //   required: ['text'],
-//   //   additionalProperties: false,
-//   // };
-//   //
-//   // if (!validate(req.body, requestBodySchema).valid) {
-//   //   next(new Error('INVALID_API_FORMAT'));
-//   // }
+router.post('/', (req, res, next) => {
+  const book = newBooks(req.body);
 
-//   const books = newbooks(req.body.text);
+  console.log(book);
 
-//   console.log(books);
+  db.get('books')
+    .push(book)
+    .write();
 
-//   db.get('cards')
-//     .push(book)
-//     .write();
-
-//   res.json({ status: 'OK', data: book });
-// });
+  res.json({ status: 'OK', data: book });
+});
 
 // PATCH /books/:id
-router.patch('/:id', (req, res, next) => {
-  // const requestBodySchema = {
-  //   id: 'path-task',
-  //   type: 'object',
-  //   properties: {
-  //     text: { type: 'string' },
-  //     isCompleted: { type: 'boolean' },
-  //   },
-  //   additionalProperties: false,
-  //   minProperties: 1,
-  // };
-  //
-  // if (!validate(req.body, requestBodySchema).valid) {
-  //   next(new Error('INVALID_API_FORMAT'));
-  // }
-
+router.patch('/:id', (req, res) => {
   const book = db
     .get('books')
     .find({ id: req.params.id })

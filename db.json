@@ -7,7 +7,7 @@
       "name": "Twilight",
       "rating": 3,
       "description": "test-description",
-      "isReaded": false
+      "isReaded": true
     },
     {
       "id": "2",
@@ -107,6 +107,15 @@
       "rating": 5,
       "description": "test-description",
       "isReaded": false
+    },
+    {
+      "id": "06acebae4b699",
+      "img": "https://via.placeholder.com/150",
+      "isReaded": false,
+      "name": "ss",
+      "genre": "ss",
+      "rating": "3",
+      "description": "sss"
     }
   ]
 }
